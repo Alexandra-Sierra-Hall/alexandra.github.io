@@ -1,0 +1,392 @@
+/* General image styling */
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    border: 5px solid #7caadb;
+}
+
+/* Image container styling */
+.img {
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image fade-in effect */
+.img img {
+    opacity: 0.09;
+    transition: opacity 1s ease-in;
+}
+
+/* Fully opaque image after fade-in */
+.img img.fade-in {
+    opacity: 1;
+}
+
+/* Text fade-in effect */
+.img h1, .img p {
+    opacity: 0.09;
+    transition: opacity 1s ease-in;
+}
+
+/* Fully opaque text after fade-in */
+.img h1.fade-in, .img p.fade-in {
+    opacity: 1;
+}
+
+/* Paragraph styling */
+.img p {
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Flex container for navigation tabs */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 70px;
+    height: 70vh;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.flex-container > a {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 16px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 3px solid #7caadb;
+    text-decoration: none;
+    color: #000;
+}
+
+.flex-container > a:hover {
+    background-color: #9bb5eb;
+}
+
+/* Section styling */
+.section {
+    padding: 100px;
+    margin: 100px 0;
+}
+
+/* Body styling */
+body {
+    background-image: url("WebsiteImages/texture-1874557.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+h1, h2 {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+/* Container for about section */
+.flex-containerabout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px; /* Reduced padding */
+    box-sizing: border-box;
+}
+
+/* Container for flex boxes and images */
+.flex-containerabout .flex-boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/* Adjusted image container styling in the About section */
+.flex-containerabout .flex-boxes > div {
+    background-color: #0000006c;
+    color: #ffffff;
+    flex: 1;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    height: 500px; /* Default height */
+    box-sizing: border-box;
+}
+
+/* Adjust image positioning to be centered */
+.flex-containerabout .flex-boxes > div img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    position: absolute;
+    top: -100px; /* Adjust to ensure image is centered correctly */
+}
+
+/* Adjust paragraph margin to keep text aligned properly */
+.flex-containerabout .flex-boxes > div p {
+    margin-top: 80px; /* To account for the space taken by the image */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1000px) {
+    .flex-containerabout .flex-boxes {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center;
+    }
+
+    .flex-containerabout .flex-boxes > div {
+        width: 80%; /* Adjust width for mobile */
+        margin: 60px 0; /* Increase margins to prevent overlap */
+        height: 600px; /* Increase height for better readability */
+    }
+
+    .flex-containerabout .flex-boxes > div img {
+        width: 150px; /* Smaller width for mobile screens */
+        height: 150px; /* Smaller height for mobile screens */
+        position: static; /* Reset the image positioning */
+        margin-top: -75px; /* Adjust margin for better positioning on mobile */
+    }
+
+    .flex-containerabout .flex-boxes > div p {
+        margin-top: 100px; /* Adjust margin to keep text aligned properly */
+    }
+}
+
+/* Add spacing between the rows */
+.flex-containerabout .flex-boxes + .flex-boxes {
+    margin-top: 50px; /* Adjust the spacing between rows */
+}
+
+/* Flexbox container for other sections */
+.flex-containersection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Flexbox styling for other sections */
+.flex-containersection .flex-box {
+    background-color: #0000006c;
+    color: #ffffff;
+    flex: 1;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    height: 200px;
+    width: 80%;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1000px) {
+    .flex-containerabout .flex-boxes {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center;
+    }
+
+    .flex-containerabout .flex-boxes > div {
+        width: 80%; /* Adjust width for mobile */
+        margin: 60px 0; /* Increase margins to prevent overlap */
+        height: 600px; /* Adjust height to avoid overlap */
+    }
+
+    .flex-containerabout .flex-boxes > div img {
+        position: static; /* Reset the image positioning */
+        margin-top: -75px; /* Keep the image at the top */
+    }
+
+    .flex-containerabout .flex-boxes > div p {
+        margin-top: 60px; /* Adjust margin to keep text aligned properly */
+    }
+
+    .flex-containersection .flex-box {
+        height: 300px; /* Increase height on mobile for better layout */
+    }
+}
+
+/* Default margin for skills section */
+#skills {
+    margin-top: 450px; /* Default margin between sections */
+}
+/* Increase margin for smallest screens */
+@media (max-width: 1000px) {
+    #skills {
+        margin-top: 1400px; /* Increased margin to avoid overlap on smaller screens */
+    }
+}
+
+/* Default margin for classes section */
+#classes {
+    margin-top: -250px; /* Default margin between sections */
+}
+/* Increase margin for smallest screens */
+@media (max-width: 1000px) {
+    #classes {
+        margin-top: -250px; /* Increased margin to avoid overlap on smaller screens */
+    }
+}
+
+
+/* Default margin for contact section */
+#contact {
+    margin-top: -250px; /* Default margin between sections */
+}
+/* Increase margin for smallest screens */
+@media (max-width: 1000px) {
+    #contact {
+        margin-top: -250px; /* Increased margin to avoid overlap on smaller screens */
+    }
+}
+
+/* Flexbox container for the projects section */
+.flex-containerprojects, .flex-containerprojects2 {
+    display: flex;
+    flex-direction: row; /* Ensure items are laid out in a row */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto; /* Adjust height as necessary */
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px; /* Ensure uniform padding */
+    box-sizing: border-box;
+    margin-top: 50px; /* Margin between sections */
+}
+
+/* Flexbox on the left */
+.flex-containerprojects .flex-box, .flex-containerprojects2 .flex-box {
+    background-color: #0000006c;
+    color: #ffffff;
+    flex: 1;
+    margin: 20px; /* Ensure uniform margins */
+    padding: 20px; /* Ensure uniform padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    height: 400px; /* Adjust height as necessary */
+    width: 40%; /* Flexbox occupies 40% of the width */
+}
+
+/* Make images rectangular */
+.flex-containerprojects .flex-box img, .flex-containerprojects2 .flex-box img {
+    width: 100%; /* Make the image take the full width of the container */
+    height: 400px; /* Fixed height for rectangular appearance */
+    object-fit: cover; /* Ensure the image covers the container area */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+/* Text on the right */
+.flex-containerprojects .project-text, .flex-containerprojects2 .project-text {
+    flex: 1;
+    color: #ffffff;
+    margin: 20px; /* Ensure uniform margins */
+    padding: 20px; /* Ensure uniform padding */
+    font-size: 1.2rem;
+    width: 50%; /* Text occupies 50% of the width */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1000px) {
+    .flex-containerprojects {
+        flex-direction: column; /* Stack flexbox and text vertically on small screens */
+    }
+
+    .flex-containerprojects .flex-box,
+    .flex-containerprojects .project-text {
+        width: 80%; /* Adjust width for better layout on mobile */
+        margin: 20px 0; /* Increase margin to prevent overlap */
+    }
+
+    .flex-containerprojects .flex-box {
+        height: 300px; /* Adjust height for mobile screens */
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1000px) {
+    .flex-containerprojects2 {
+        flex-direction: column; /* Stack flexbox and text vertically on small screens */
+    }
+
+    .flex-containerprojects2 .project-text,
+    .flex-containerprojects2 .flex-box {
+        width: 80%; /* Adjust width for better layout on mobile */
+        margin: 20px 0; /* Increase margin to prevent overlap */
+    }
+
+    .flex-containerprojects2 .flex-box {
+        height: 300px; /* Adjust height for mobile screens */
+    }
+}
+
+#projects {
+    margin-top: -300px; /* Moves the entire section 50px up */
+}
+
+/* Initial hidden state for sections */
+.section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Visible state for sections */
+.section.visible {
+    opacity: 1;
+}
+
+#footer{
+    font-size: 1rem;
+    color: #ffffff;
+}
+
